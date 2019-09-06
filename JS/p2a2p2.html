@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>P2_ASSESSMENT </title>
+    <style type="text/css">
+        body {
+            margin: 30px;
+        }
+        .result {
+            padding: 10px;
+            color: green;
+        }
+        .button {
+            margin: 20px;
+        }
+    </style> 
+</head>
+<body>
+    <header class="header">
+            <h1>P2_A2_PROBLEM2</h1>
+    </header>
+
+    <form class="input">
+        Input Number : <input type="text" class="input" id="inputNumber" /><br>
+        <input type="button" class ="button" onClick="triangle()" Value="Triangle" />
+    </form>
+    <div class ="result">
+        <span id = "result"></span>
+    </div>  
+<script>
+    const triangle = function() {
+        let num = document.getElementById("inputNumber").value;
+        i = 1;
+        outStr = "";
+        while (i <= num) {
+            outStr += "*".repeat(i);
+            outStr += '<br />';    
+            i += 1;
+        }    
+        console.log(outStr);
+        document.getElementById("result").innerHTML = outStr;
+    }
+</script>  
+</body>
+</html>
